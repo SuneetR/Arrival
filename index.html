@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Add these inside the <head> of your document -->
-<meta name="description" content="Detect fake reviews using machine learning technology. Fast and accurate fake review detector for businesses and individuals.">
-<meta name="keywords" content="fake review detector, machine learning, reviews, authenticity, business tools">
-<meta name="robots" content="index, follow">
-<title>Fake Review Detector</title>
-
-    <title>Fake Review Detector - Revamped</title>
+    <meta name="description" content="Detect fake reviews using machine learning technology.">
+    <meta name="keywords" content="fake review detector, machine learning, reviews, authenticity">
+    <meta name="robots" content="index, follow">
+    <title>Fake Review Detector - Enhanced</title>
     <style>
         /* General Styles */
         * {
@@ -24,118 +21,7 @@
             color: #333;
             line-height: 1.6;
         }
-        header {
-            background-color: #282c34;
-            padding: 1rem;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-        .nav-links li {
-            margin: 0 1rem;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .nav-links a:hover {
-            color: #f39c12;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to bottom right, #3498db, #2ecc71);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .hero-heading {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .cta-button {
-            padding: 0.7rem 1.5rem;
-            background-color: #f39c12;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #e67e22;
-        }
-
-        /* Features Section */
-        #features {
-            padding: 4rem 0;
-            background-color: #f4f4f9;
-            text-align: center;
-        }
-        .features-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 2rem 0;
-        }
-        .feature {
-            flex-basis: 30%;
-            background-color: #fff;
-            margin: 1rem;
-            padding: 2rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .feature:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #282c34;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .features-container {
-                flex-direction: column;
-            }
-            .feature {
-                flex-basis: 100%;
-            }
-            .hero-heading {
-                font-size: 2rem;
-            }
-        }
-        /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-}
+       /* Navigation Bar */
 header {
     background-color: #282c34;
     padding: 1rem;
@@ -145,6 +31,7 @@ header {
     z-index: 1000;
     animation: slideDown 1s ease-in-out forwards;
 }
+
 @keyframes slideDown {
     from {
         top: -100px;
@@ -160,146 +47,250 @@ header {
     align-items: center;
     color: white;
 }
+
 .nav-links {
     list-style: none;
     display: flex;
 }
+
 .nav-links li {
     margin: 0 1rem;
 }
+
 .nav-links a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .nav-links a:hover {
     color: #f39c12;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: linear-gradient(to bottom right, #3498db, #2ecc71);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    opacity: 0;
-    animation: fadeIn 2s forwards ease-out;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.hero-heading {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: textZoomIn 1.5s ease-in-out;
-}
-@keyframes textZoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.cta-button {
-    padding: 0.7rem 1.5rem;
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.cta-button:hover {
-    background-color: #e67e22;
     transform: scale(1.1);
 }
 
-/* Features Section */
-#features {
-    padding: 4rem 0;
+.nav-links a.active {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom right, #3498db, #2ecc71);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            animation: fadeIn 2s forwards ease-out, slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .hero-heading {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: textZoomIn 1.5s ease-in-out;
+        }
+
+        @keyframes textZoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .cta-button {
+            padding: 0.7rem 1.5rem;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e67e22;
+            transform: scale(1.1);
+        }
+
+        /* Model Section */
+        #model-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #f0f8ff;
+            transition: background-color 0.3s ease;
+        }
+
+        #model-section:hover {
+            background: #d4e6f1;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+        }
+
+        button {
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Features Section */
+        #features {
+            padding: 4rem 0;
+            background-color: #f4f4f9;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .feature {
+            flex-basis: 30%;
+            background-color: #fff;
+            margin: 1rem;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            background-color: #f7f7f7;
+        }
+
+        /* "Why Choose Us" Enhancements */
+        #animated-text {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+        /* Contact Section Styles */
+#contact {
     background-color: #f4f4f9;
+    padding: 4rem 0;
     text-align: center;
-    opacity: 0;
-    animation: fadeInUp 1.5s ease-out forwards;
-    animation-delay: 2s;
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.features-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 2rem 0;
-}
-.feature {
-    flex-basis: 30%;
-    background-color: #fff;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.feature:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-footer {
-    background-color: #282c34;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 3s;
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-    .features-container {
-        flex-direction: column;
-    }
-    .feature {
-        flex-basis: 100%;
-    }
-    .hero-heading {
-        font-size: 2rem;
-    }
-}
-        /* Scroll-triggered Animations */
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-out;
+#contact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-.fade-in-up.visible {
-    opacity: 1;
-    transform: translateY(0);
+#contact p {
+    font-size: 1.1rem;
+    color: #555;
 }
 
-/* Modal Styles */
+#contact a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form Styles */
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form button {
+    transition: all 0.3s ease;
+}
+
+#contact-form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+#contact-form button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+        /* Modal Styles */
 .modal {
     position: fixed;
     top: 50%;
@@ -310,11 +301,15 @@ footer {
     border-radius: 10px;
     z-index: 1001;
     display: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .modal.open {
     display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .modal-content {
@@ -329,6 +324,10 @@ footer {
     font-size: 1.5rem;
 }
 
+.modal-close:hover {
+    color: #e74c3c;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -338,58 +337,115 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .overlay.open {
     display: block;
+    opacity: 1;
+}
+        /* Footer Styles */
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 1rem;
+footer p {
+    margin: 0;
+    font-size: 1rem;
 }
 
-input {
-    padding: 0.7rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+footer p:hover {
+    color: #f39c12;
+    transition: color 0.3s ease;
 }
-
+        /* Advanced Button Hover Effects */
 button {
-    padding: 0.7rem;
+    padding: 0.7rem 1.5rem;
     background-color: #3498db;
     color: white;
     border: none;
+    border-radius: 50px;
     cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #2980b9;
-}
-        /* Parallax Section */
-.parallax {
-    background-image: url('https://example.com/your-image.jpg'); /* Replace with your image */
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.parallax-text {
+/* Advanced Hover Effect for Feature Cards */
+.feature {
+    flex-basis: 30%;
+    background-color: #fff;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+        /* Typing Effect for Headings */
+#animated-text {
+    font-size: 36px;
+    font-weight: bold;
     text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* General Fade-In Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide-In Animation for Images or Elements */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
         /* Floating Action Button */
 .fab {
@@ -418,6 +474,26 @@ button:hover {
 .fab i {
     pointer-events: none;
 }
+        /* Parallax Section */
+.parallax {
+    background-image: url('https://example.com/your-image.jpg'); /* Replace with your image */
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+}
         /* Enhanced Button Hover Effect */
 button {
     padding: 0.7rem 1.5rem;
@@ -435,7 +511,7 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Enhanced Hover Effect for Feature Cards */
+/* Advanced Hover Effect for Feature Cards */
 .feature {
     flex-basis: 30%;
     background-color: #fff;
@@ -450,21 +526,61 @@ button:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     background-color: #f7f7f7;
 }
-        .nav-links a.active {
-    color: #f39c12;
+
+/* Enhanced Typing Effect */
+#animated-text {
+    font-size: 36px;
     font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
 }
 
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
 
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+        /* Enhanced Footer Styles */
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
 
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+footer a:hover {
+    color: #e67e22;
+}
 
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+footer p:hover {
+    color: #f39c12;
+}
 
     </style>
-
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
@@ -482,18 +598,31 @@ button:hover {
     <section id="home" class="hero">
         <h1 class="hero-heading">Welcome to Fake Review Detector</h1>
         <p>Using advanced machine learning to spot fake reviews instantly.</p>
-        <button class="cta-button">Get Started</button>
+        <button id="get-started" class="cta-button">Get Started</button>
     </section>
+    <!-- Modal Trigger -->
+<button class="modal-open" style="padding: 10px 20px; font-size: 18px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Open Modal</button>
 
-    <!-- Parallax Section -->
+<!-- Parallax Section -->
 <div class="parallax">
     <div class="parallax-text">See the Future of Fake Review Detection</div>
 </div>
 
+    <!-- Model Section -->
+    <section id="model-section">
+    <div style="width: 60%;">
+        <textarea placeholder="Enter your text here..."></textarea>
+        <button>Analyze</button>
+    </div>
+    <div style="width: 35%; background-color: transparent;">
+        <!-- Reserved space for AI model results -->
+    </div>
+</section>
 
-    <!-- Feature Section -->
+
+    <!-- Features Section -->
     <section id="features">
-        <h2>Why Choose Us?</h2>
+        <h2 id="animated-text">Why Choose Us?</h2>
         <div class="features-container">
             <div class="feature">
                 <h3>Fast and Accurate</h3>
@@ -509,48 +638,182 @@ button:hover {
             </div>
         </div>
     </section>
+    <!-- Data Visualization Section -->
+<section id="data-visualization" style="padding: 4rem 0; text-align: center; background-color: #f4f4f9;">
+    <h2>Review Statistics</h2>
+    <canvas id="reviewChart" style="max-width: 600px; margin: 0 auto;"></canvas>
+</section>
+
 
     <!-- Floating Action Button (FAB) -->
-<div class="fab" id="scroll-to-top">
-    <i class="fa fa-arrow-up"></i> <!-- FontAwesome icon (or use your own) -->
-</div>
+    <div class="fab" id="scroll-to-top">
+        <i class="fa fa-arrow-up"></i> <!-- FontAwesome icon (or use your own) -->
+    </div>
+
+    <!-- Contact Section -->
+   <section id="contact" class="fade-in-up" style="padding: 4rem 0; background-color: #f4f4f9;">
+    <h2>Contact Us</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+        <div style="width: 45%;">
+            <h3>Have any queries? Want to contribute?</h3>
+            <p>Email us at: <a href="mailto:support@fakereviewdetector.com">support@fakereviewdetector.com</a></p>
+            <p>We're always happy to hear from you!</p>
+        </div>
+        <div style="width: 45%;">
+            <form id="contact-form" style="display: flex; flex-direction: column;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required style="padding: 0.7rem; margin-bottom: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                <span class="error-message" style="color: red;"></span>
+                <button type="submit" style="padding: 0.7rem 1.5rem; background-color: #3498db; color: white; border: none; border-radius: 50px; cursor: pointer;">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
 
 
-     <section id="contact" class="fade-in-up">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <span class="error-message" style="color: red;"></span>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
 
     <!-- Modal Trigger -->
     <button class="modal-open">Open Modal</button>
 
     <!-- Modal Structure -->
-    <div class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2>Welcome to Fake Review Detector!</h2>
-            <p>This is an example of a modal pop-up for extra content or interaction.</p>
-        </div>
+   <!-- Modal Structure -->
+<div class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Welcome to Fake Review Detector!</h2>
+        <p>This is an example of a modal pop-up for extra content or interaction.</p>
     </div>
+</div>
+
+<div class="overlay"></div>
+
 
     <div class="overlay"></div>
-      <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Fake Review Detector. All Rights Reserved.</p>
-    </footer>
+
+    <!-- Footer -->
+   <footer style="background-color: #282c34; color: white; padding: 2rem 0; text-align: center;">
+    <div style="margin-bottom: 1rem;">
+        <a href="#home" style="color: #f39c12; text-decoration: none; margin-right: 1rem;">Home</a>
+        <a href="#features" style="color: #f39c12; text-decoration: none; margin-right: 1rem;">Features</a>
+        <a href="#contact" style="color: #f39c12; text-decoration: none;">Contact</a>
+    </div>
+    <p>&copy; 2024 Fake Review Detector. All Rights Reserved.</p>
+    <p>Contact us: <a href="mailto:support@fakereviewdetector.com" style="color: #f39c12;">support@fakereviewdetector.com</a></p>
+</footer>
 
     <script>
-               // script.js
+        // Smooth scroll to the model section
+        document.getElementById('get-started').addEventListener('click', function() {
+            // Fade out the hero section
+            document.querySelector('.hero').style.opacity = '0';
+            setTimeout(() => {
+                // Smooth scroll to the model section
+                document.getElementById('model-section').scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('.hero').style.display = 'none';
+            }, 500);
+        });
 
-// Scroll-triggered animations
+        // Scroll-triggered animations
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedSections = document.querySelectorAll('.fade-in-up');
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Once animated, stop observing
+                });
+            }, observerOptions);
+
+            animatedSections.forEach(section => observer.observe(section));
+        });
+
+        // Form validation
+        function validateForm() {
+            const form = document.querySelector('#contact-form');
+            const email = document.querySelector('#email');
+            const errorMessage = document.querySelector('.error-message');
+
+            form.addEventListener('submit', (e) => {
+                if (!validateEmail(email.value)) {
+                    errorMessage.textContent = 'Please enter a valid email address.';
+                    e.preventDefault();
+                } else {
+                    errorMessage.textContent = ''; // Clear any error message
+                }
+            });
+        }
+
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i;
+            return re.test(String(email).toLowerCase());
+        }
+
+        // Modal interaction
+        const modal = document.querySelector('.modal');
+        const modalOpenBtn = document.querySelector('.modal-open');
+        const modalCloseBtn = document.querySelector('.modal-close');
+        const overlay = document.querySelector('.overlay');
+
+        modalOpenBtn.addEventListener('click', () => {
+            modal.classList.add('open');
+            overlay.classList.add('open');
+        });
+
+        modalCloseBtn.addEventListener('click', () => {
+            modal.classList.remove('open');
+            overlay.classList.remove('open');
+        });
+
+        overlay.addEventListener('click', () => {
+            modal.classList.remove('open');
+            overlay.classList.remove('open');
+        });
+
+        // Scroll to top when FAB is clicked
+        document.getElementById('scroll-to-top').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Highlight active section on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 50) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        // Smooth scroll to the model section
+document.getElementById('get-started').addEventListener('click', function() {
+    // Fade out the hero section
+    document.querySelector('.hero').style.opacity = '0';
+    setTimeout(() => {
+        // Smooth scroll to the model section
+        document.getElementById('model-section').scrollIntoView({ behavior: 'smooth' });
+        document.querySelector('.hero').style.display = 'none';
+    }, 500);
+});
+        // Scroll-triggered animations
 document.addEventListener('DOMContentLoaded', function () {
-    const animatedSections = document.querySelectorAll('.fade-in-up');
-    
+    const animatedSections = document.querySelectorAll('.fade-in-up, .slide-in-left');
     const observerOptions = {
         threshold: 0.1
     };
@@ -565,54 +828,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
     animatedSections.forEach(section => observer.observe(section));
 });
-
-// Form validation
-function validateForm() {
-    const form = document.querySelector('#contact-form');
-    const email = document.querySelector('#email');
-    const errorMessage = document.querySelector('.error-message');
-
-    form.addEventListener('submit', (e) => {
-        if (!validateEmail(email.value)) {
-            errorMessage.textContent = 'Please enter a valid email address.';
-            e.preventDefault();
-        } else {
-            errorMessage.textContent = ''; // Clear any error message
-        }
-    });
-}
-
-function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i;
-    return re.test(String(email).toLowerCase());
-}
-
-// Modal interaction
-const modal = document.querySelector('.modal');
-const modalOpenBtn = document.querySelector('.modal-open');
-const modalCloseBtn = document.querySelector('.modal-close');
-const overlay = document.querySelector('.overlay');
-
-modalOpenBtn.addEventListener('click', () => {
-    modal.classList.add('open');
-    overlay.classList.add('open');
-});
-
-modalCloseBtn.addEventListener('click', () => {
-    modal.classList.remove('open');
-    overlay.classList.remove('open');
-});
-
-overlay.addEventListener('click', () => {
-    modal.classList.remove('open');
-    overlay.classList.remove('open');
-});
         // Scroll to top when FAB is clicked
 document.getElementById('scroll-to-top').addEventListener('click', function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
+});
+        // Highlight active section on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 50) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
+});
+        // Scroll-triggered animations
+document.addEventListener('DOMContentLoaded', function () {
+    const animatedSections = document.querySelectorAll('.fade-in-up, .slide-in-left');
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Once animated, stop observing
+        });
+    }, observerOptions);
+
+    animatedSections.forEach(section => observer.observe(section));
 });
         // Data visualization with Chart.js
 const ctx = document.getElementById('reviewChart').getContext('2d');
@@ -650,34 +908,14 @@ const reviewChart = new Chart(ctx, {
         }
     }
 });
-        // Highlight active section on scroll
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.nav-links a');
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 50) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
-    });
-});
+
 
 
 
 
     </script>
-
-  
-<!-- Add Chart.js via CDN in the <head> or before the closing </body> tag -->
+    <!-- Add Chart.js via CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
